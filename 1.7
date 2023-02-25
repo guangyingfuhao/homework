@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+map<int,int>mp;
+
+int main(){
+  int n;//
+  cin>>n;
+  for(int i=0;i<n;i++){
+    int x;
+    cin>>x;
+    mp[x]++;
+  }
+  int f=0;
+  for(auto j:mp){
+    if(j.second>(n+1)/2)
+      f=1;
+  }
+  if(f==1)
+      cout<<"存在出现次数超过元素一半的元素";
+    else
+      cout<<"不存在存在出现次数超过元素一半的元素";
+}
